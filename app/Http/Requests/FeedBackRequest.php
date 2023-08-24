@@ -11,7 +11,7 @@ class FeedBackRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -19,9 +19,9 @@ class FeedBackRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array
+     * @return string[]
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             'name' => 'required|max: 100',
@@ -30,7 +30,11 @@ class FeedBackRequest extends FormRequest
         ];
     }
 
-    public function messages() {
+    /**
+     * @return string[]
+     */
+    public function messages(): array
+    {
         return [
             'required' => 'Поле обязательно к заполнению',
             'email' => 'Поле должно быть e-mail адресом',

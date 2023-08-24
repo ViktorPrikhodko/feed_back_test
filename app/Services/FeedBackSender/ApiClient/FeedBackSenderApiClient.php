@@ -15,6 +15,10 @@ class FeedBackSenderApiClient
 
     private $client;
 
+    /**
+     * @param HttpFakeClient $client
+     * @param FeedBackSenderApiConfig $apiConfig
+     */
     public function __construct(HttpFakeClient $client, FeedBackSenderApiConfig $apiConfig)
     {
         $this->client = $client;

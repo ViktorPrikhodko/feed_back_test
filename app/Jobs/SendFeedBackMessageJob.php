@@ -19,7 +19,7 @@ class SendFeedBackMessageJob implements ShouldQueue
 
     /**
      * Create a new job instance.
-     *
+     * @param FeedBackMessage $feedBackMessage
      * @return void
      */
     public function __construct(FeedBackMessage $feedBackMessage)
@@ -30,9 +30,10 @@ class SendFeedBackMessageJob implements ShouldQueue
     /**
      * Execute the job.
      *
+     * @param FeedBackSenderService $feedBackSenderService
      * @return void
      */
-    public function handle(FeedBackSenderService $feedBackSenderService)
+    public function handle(FeedBackSenderService $feedBackSenderService): void
     {
         $feedBackSenderService->sendFeedBackMessage($this->feedBackMessage);
     }

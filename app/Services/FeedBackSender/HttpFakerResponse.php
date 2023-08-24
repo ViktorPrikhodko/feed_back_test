@@ -8,6 +8,10 @@ class HttpFakerResponse
 
     private $body;
 
+    /**
+     * @param int $code
+     * @param string $body
+     */
     public function __construct(int $code, string $body)
     {
         $this->code = $code;

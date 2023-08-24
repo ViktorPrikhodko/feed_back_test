@@ -9,9 +9,11 @@ use App\Services\FeedBackSender\ApiClient\FeedBackSenderApiClient;
 
 class FeedBackSenderService
 {
-    /** @var FeedBackSenderApiClient */
     private $apiClient;
 
+    /**
+     * @param FeedBackSenderApiClient $client
+     */
     public function __construct(FeedBackSenderApiClient $client)
     {
         $this->apiClient = $client;
