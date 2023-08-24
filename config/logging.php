@@ -48,6 +48,11 @@ return [
     */
 
     'channels' => [
+        'feedBackSender' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/feed_back_sender.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],
