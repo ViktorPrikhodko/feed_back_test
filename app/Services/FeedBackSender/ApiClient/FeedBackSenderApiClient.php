@@ -46,7 +46,7 @@ class FeedBackSenderApiClient
 
             Log::channel('feedBackSender')
                 ->info('Отправка feedback к внешней Api', [
-                    'time' => now()->format('H:m:i'),
+                    'time' => now()->toTimeString(),
                     'apiUrl' => $this->apiConfig->getApiUrl(),
                     'apiLogin' => $this->apiConfig->getApiLogin(),
                     'apiPwd' => $this->apiConfig->getApiPassword(),
